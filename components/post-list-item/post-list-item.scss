@@ -1,0 +1,71 @@
+$yelow-color:#FFD700;
+$red-color:#f33131;
+
+@import 'test';
+
+// .app-list {
+//     .list-group-item {
+//         background-color: lawngreen;
+//     }
+// }
+.app-list-item {
+    font-size: 1.25rem;
+
+  
+    & button {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+  & button:focus {
+    box-shadow: none;
+    outline: none;
+    }
+
+    & .btn-star {
+        color: $yelow-color;
+    }
+
+    & .btn-trash {
+        color: $red-color;
+    }
+    & .fa-heart {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        font-size: 16px;
+        color: $red-color;
+        transition: 0.3s all;
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    
+    &-label {
+      display: block;
+      line-height: 35px;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.5s all;
+    }
+    
+    &.like .fa-heart {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+    &.important .app-list-item-label {
+      color: $yelow-color;
+    }
+    
+    &.important .btn-star {
+        color: #aeaeae;
+    }
+
+}  
+
+
